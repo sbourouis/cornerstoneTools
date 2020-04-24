@@ -532,9 +532,9 @@ export default class FreehandRoiTool extends BaseAnnotationTool {
         // This uses Char code 178 for a superscript 2
         let suffix = ` mm${String.fromCharCode(178)}`;
 
-        const { rowPixelSpacing, columnPixelSpacing } = getPixelSpacing(image);
+        const { rowPixelSpacing, colPixelSpacing } = getPixelSpacing(image);
 
-        if (!rowPixelSpacing || !columnPixelSpacing) {
+        if (!rowPixelSpacing || !colPixelSpacing) {
           suffix = ` pixels${String.fromCharCode(178)}`;
         }
 
